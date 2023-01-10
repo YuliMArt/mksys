@@ -1,0 +1,67 @@
+import { AiOutlineTransaction } from "react-icons/ai";
+import { MdOutlineSupervisorAccount } from "react-icons/md";
+import { RiBillLine } from "react-icons/ri";
+import { TiTicket } from "react-icons/ti";
+export const cardData = [
+  {
+    icon: <MdOutlineSupervisorAccount />,
+    amount: "2116",
+    total: "2291",
+    title: "Clientes Online",
+    subtitle: "Clientes",
+    legend: "Total registrados",
+    link: "Ver clientes",
+    to: "usuarios",
+    iconColor: "white",
+    iconBg: "#009688",
+    back: "#03A9F4",
+  },
+  {
+    icon: <AiOutlineTransaction />,
+    amount: "MX$4,39.00",
+    total: "MX$654,555.00",
+    title: "Transacciones hoy",
+    subtitle: "Finanzas",
+    legend: "Cobrado este mes",
+    link: "Ver transacciones",
+    to: "transacciones",
+    iconColor: "white",
+    iconBg: "#4CAF50",
+    back: "#FFA000",
+  },
+  {
+    icon: <RiBillLine />,
+    amount: "423,39",
+    total: "544",
+    title: "Facturas no pagadas",
+    subtitle: "Finanzas",
+    legend: "Total vencidas",
+    link: "Ver facturas",
+    to: "facturas",
+    iconColor: "white",
+    iconBg: "#FF4081",
+    back: "#9C27B0",
+  },
+  {
+    icon: <TiTicket />,
+    amount: "39,354",
+    total: "12",
+    title: "Ticket soporte",
+    subtitle: "Tickets",
+    legend: "Total abiertos",
+    link: "Ver tickets",
+    to: "open",
+    iconColor: "white",
+    iconBg: "#9E9E9E",
+    back: "#455A64",
+  },
+];
+export const propsTs = {
+  position: "top-right",
+  autoClose: 4000,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+};
