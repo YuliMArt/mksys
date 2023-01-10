@@ -7,20 +7,24 @@ import { AuthProvider } from "./auth/AuthContext";
 import { AppRouter } from "./router/AppRouter";
 import { ContextProviderInfo } from "./context/ContextInfo";
 import { SocketProvider } from "./context/SocketContext";
+import { UsersProvider } from "./context/user/ContextUser";
+import { RedProvider } from "./context/connection/ContextRed";
 
 moment.locale("es");
 export const MainApp = () => {
   return (
     <ContextProvider>
-      {/* <ChatProvider> */}
-        <AuthProvider>
-          <ContextProviderInfo>
-            <SocketProvider>
-              <AppRouter />
-            </SocketProvider>
-          </ContextProviderInfo>
-        </AuthProvider>
-      {/* </ChatProvider> */}
+      <AuthProvider>
+        <ContextProviderInfo>
+          <RedProvider>
+            <UsersProvider>
+              <SocketProvider>
+                <AppRouter />
+              </SocketProvider>
+            </UsersProvider>
+          </RedProvider>
+        </ContextProviderInfo>
+      </AuthProvider>
     </ContextProvider>
   );
 };
